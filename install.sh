@@ -7,7 +7,7 @@ sudo dnf copr enable atim/starship
 sudo dnf copr enable lihaohong/yazi
 
 sudo dnf install git gh neovim ghostty zsh starship yazi fastfetch zoxide atuin zsh-autosuggestions zsh-syntax-highlighting lsd bat fzf steam kvantum
-flatpak install flathub com.brave.Browser dev.vencord.Vesktop com.bitwarden.desktop com.obsproject.Studio
+flatpak install flathub com.brave.Browser dev.vencord.Vesktop com.bitwarden.desktop com.obsproject.Studio net.davidotek.pupgui2
 
 # Paquetes que solo existen como RPMs
 curl -L -o $HOME/pear-desktop.rpm https://github.com/pear-devs/pear-desktop/releases/download/v3.11.0/youtube-music-3.11.0.x86_64.rpm
