@@ -5,8 +5,10 @@ mv dots/. $HOME/
 sudo dnf copr enable scottames/ghostty
 sudo dnf copr enable atim/starship
 sudo dnf copr enable lihaohong/yazi
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 
-sudo dnf install git gh neovim ghostty zsh starship yazi fastfetch zoxide atuin zsh-autosuggestions zsh-syntax-highlighting lsd bat fzf steam kvantum
+sudo dnf install git gh neovim ghostty code zsh starship yazi fastfetch zoxide atuin zsh-autosuggestions zsh-syntax-highlighting lsd bat fzf steam kvantum
 flatpak install flathub com.brave.Browser dev.vencord.Vesktop com.bitwarden.desktop com.obsproject.Studio net.davidotek.pupgui2
 
 # Paquetes que solo existen como RPMs
@@ -22,10 +24,6 @@ echo -e '\n# pyenv' >> ~/.zshrc
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
-
-curl -f https://zed.dev/install.sh | sh # Zed
-echo -e '\n# Zed' >> ~/.zshrc
-echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.zshrc
 
 # Tipografías que no existen como paquetes
 mkdir -p ~/.local/share/fonts
