@@ -26,6 +26,8 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
 
+curl -fsSL https://opencode.ai/install | bash # opencode
+
 # Tipografías que no existen como paquetes
 mkdir -p ~/.local/share/fonts
 git clone https://github.com/simpals/onest.git /tmp/onest
